@@ -1,0 +1,25 @@
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {RouterModule} from '@angular/router';
+
+import { NavbarComponent } from './navbar.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SharedModule } from '@app/shared/shared.module';
+
+
+@NgModule({
+  declarations: [
+    NavbarComponent,
+    SidenavComponent
+  ],
+  imports: [
+    CommonModule,
+    SharedModule,
+    RouterModule
+  ],
+  exports: [
+    NavbarComponent
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+export class NavbarModule { }
