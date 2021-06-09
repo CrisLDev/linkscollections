@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* Global Changes for bootstrap */
+.btn {
+    border-radius: 0!important;
+}
+
+.card{
+    border-radius: 0!important;
+}
+
+.navbar{
+    backdrop-filter: blur(100px);
+}
+
+.shadow-sm-2 {
+    box-shadow: 0 .200rem .30rem rgba(0,0,0,.100)!important;
+}
