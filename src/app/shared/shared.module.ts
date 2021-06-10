@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { SwipperModule } from './swipper/swipper.module';
+import { OwlModule } from './swipper/owl.module';
 
 
 @NgModule({
   imports: [
-    SwipperModule
+    OwlModule
   ],
-  exports: [SwipperModule]
+  exports: [OwlModule]
 })
 export class SharedModule { }

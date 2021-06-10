@@ -1,19 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
+/* My Own Styles */
+.shorter{
+    overflow: hidden; -webkit-line-clamp: 1; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical;
+}
+
 /* Global Changes for bootstrap */
-.btn {
-    border-radius: 0!important;
-}
-
-.card{
-    border-radius: 0!important;
-}
-
 .navbar{
     backdrop-filter: blur(100px);
 }
 
 .shadow-sm-2 {
     box-shadow: 0 .200rem .30rem rgba(0,0,0,.100)!important;
+}
+
+/* Owl Carousel Changes */
+.btn-event{
+    color: rgba(9, 9, 9, 0.282);
+}
+
+.btn-event:hover{
+    color: rgba(9, 9, 9, 0.282);
+    cursor: pointer;
+    animation: color-change 5s infinite;
+}
+
+@-webkit-keyframes color-change {
+    0% { color: rgba(9, 9, 9, 0.809); }
+    30% { color: rgba(0, 0, 0, 0.419); }
+    50% { color: rgba(0, 0, 0, 0.781); }
+    100% { color: rgb(0, 0, 0); }
+}
+@-moz-keyframes color-change {
+    0% { color: rgba(9, 9, 9, 0.809); }
+    30% { color: rgba(0, 0, 0, 0.419); }
+    50% { color: rgba(0, 0, 0, 0.781); }
+    100% { color: rgb(0, 0, 0); }
+}
+@-ms-keyframes color-change {
+    0% { color: rgba(9, 9, 9, 0.809); }
+    30% { color: rgba(0, 0, 0, 0.419); }
+    50% { color: rgba(0, 0, 0, 0.781); }
+    100% { color: rgb(0, 0, 0); }
+}
+@-o-keyframes color-change {
+    0% { color: rgba(9, 9, 9, 0.809); }
+    30% { color: rgba(0, 0, 0, 0.419); }
+    50% { color: rgba(0, 0, 0, 0.781); }
+    100% { color: rgb(0, 0, 0); }
+}
+@keyframes color-change {
+    0% { color: rgba(9, 9, 9, 0.809); }
+    30% { color: rgba(0, 0, 0, 0.494); }
+    50% { color: rgba(0, 0, 0, 0.781); }
+    100% { color: rgb(0, 0, 0); }
 }

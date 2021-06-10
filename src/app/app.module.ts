@@ -7,6 +7,8 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './core/ngrx/reducers';
 import { ComponentsModule } from './shared/components/components.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -17,6 +19,7 @@ import { ComponentsModule } from './shared/components/components.module';
     StoreModule.forRoot(reducers, {
       metaReducers
     }),
+    BrowserAnimationsModule,
     ComponentsModule
   ],
   providers: [],

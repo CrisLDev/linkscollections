@@ -7,6 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TagsCardComponent implements OnInit {
 
+  Tags = [
+    {
+      name: 'Action'
+    },
+    {
+      name: 'Drama'
+    },
+    {
+      name: 'Comedy'
+    },
+    {
+      name: 'Youtuber'
+    },
+    {
+      name: 'WindowsOs'
+    },
+    {
+      name: 'LinuxOs'
+    },
+    {
+      name: 'DigitalBook'
+    },
+    {
+      name: 'RealBook'
+    },
+    {
+      name: 'Cosplay'
+    },
+    {
+      name: 'Foro'
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

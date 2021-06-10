@@ -8,36 +8,21 @@
   </div>
     <div class="card-body">
         <div class="row">
-            <div class="col-md-6">
-                <div class="card mb-3">
+            <div class="col-md-6" *ngFor="let collection of Collections">
+                <div class="card mb-3 bg-light border-0 p-2 position-relative">
                     <div class="row g-0">
-                      <div class="col-md-4">
-                        <img class="img-fluid" src="https://images.unsplash.com/photo-1529419412599-7bb870e11810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt="...">
+                      <div class="col-md-4 overflow-hidden" style="height: 80px; min-width: 56px; max-width: 56px;">
+                        <img class="img-fluid" [src]="collection.imgMainUrl" [alt]="collection.name">
                       </div>
                       <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="card-body pt-0 pb-0">
+                          <h5 class="m-0 shorter">{{collection.name}}</h5>
+                          <p class="card-text m-0 shorter">{{collection.description}}</p>
+                          <p class="card-text m-0"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                       </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img class="img-fluid" src="https://images.unsplash.com/photo-1529419412599-7bb870e11810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
+                      <small class="me-2 ms-auto text-muted position-absolute top-0 end-0">{{collection.category}}</small>
                 </div>
             </div>
         </div>

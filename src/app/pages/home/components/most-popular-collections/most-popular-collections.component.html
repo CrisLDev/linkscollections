@@ -1,61 +1,29 @@
 <div class="card border-0 shadow-sm-2">
   <div
-    class="card-header pt-3 text-uppercase bg-transparent border-bottom-0"
+    class="card-header pt-3 text-uppercase bg-transparent border-bottom-0 d-flex justify-content-between align-items-center"
   >
     <h4>
       <i class="fas fa-fire"></i><span class="ms-2">Collections on Fire</span>
     </h4>
+    <a class="btn-event" (click)="owlCar.next()"><i class="fas fa-arrow-right"></i></a>
   </div>
   <div class="card-body">
-    <swiper [config]="collectionOnFire">
-      <div>
-        <div
-          class="card img-fluid mb-3 overflow-hidden"
-          style="max-height: 10em"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1529419412599-7bb870e11810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
-            alt="..."
-          />
-          <div class="card-img-overlay text-white">
-            <h4 class="card-title">Avro</h4>
-            <p class="card-text">Tutorial for Apache Avro</p>
-            <a href="#" class="btn btn-info text-white">Learn</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          class="card img-fluid mb-3 overflow-hidden"
-          style="max-height: 10em"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1529419412599-7bb870e11810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
-            alt="..."
-          />
-          <div class="card-img-overlay text-white">
-            <h4 class="card-title">Avro</h4>
-            <p class="card-text">Tutorial for Apache Avro</p>
-            <a href="#" class="btn btn-info text-white">Learn</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          class="card img-fluid mb-3 overflow-hidden"
-          style="max-height: 10em"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1529419412599-7bb870e11810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
-            alt="..."
-          />
-          <div class="card-img-overlay text-white">
-            <h4 class="card-title">Avro</h4>
-            <p class="card-text">Tutorial for Apache Avro</p>
-            <a href="#" class="btn btn-info text-white">Learn</a>
-          </div>
-        </div>
-      </div>
-    </swiper>
+    <owl-carousel-o [options]="customOptions" #owlCar>
+        <ng-container *ngFor="let category of Categories">
+          <ng-template carouselSlide [id]="category._id">
+            <div class="card img-fluid mb-3 overflow-hidden" style="max-height: 10em">
+              <img
+                [src]="category.imgWallpaperUrl"
+                alt="category.name"
+              />
+              <div class="card-img-overlay text-white">
+                <h4 class="card-title">{{category.name}}</h4>
+                <p class="card-text shorter">{{category.description}}</p>
+                <a href="#" class="btn btn-primary text-white">More</a>
+              </div>
+            </div>
+          </ng-template>
+        </ng-container>
+    </owl-carousel-o>
   </div>
 </div>

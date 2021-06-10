@@ -3,23 +3,12 @@
     class="card-header pt-3 text-uppercase bg-transparent border-bottom-0"
   >
     <h4>
-      <i class="fas fa-fire"></i><span class="ms-2">Tags</span>
+      <i class="fas fa-fire"></i><span class="ms-2">Search by Tags</span>
     </h4>
   </div>
     <div class="card-body">
         <div class="text-center">
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
-            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1">Primary</span>
+            <span class="badge bg-primary me-1 ms-1 p-2 mb-1 mt-1" *ngFor="let tag of Tags">{{tag.name}}</span>
         </div>
     </div>
 </div>
